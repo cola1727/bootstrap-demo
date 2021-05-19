@@ -1,0 +1,98 @@
+@main-bg: #f6f6f6;
+
+.flex-layout(@justify: center; @align: center; @wrap: nowrap; ) {
+  display: flex;
+  justify-content: @justify;
+  align-self: @align;
+  flex-wrap: @wrap;
+}
+
+* {
+  border: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  background-color: @main-bg;
+
+  .logo {
+    width: 30px;
+  }
+
+  .title {
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 900;
+    margin-left: 10px;
+  }
+}
+
+.banner {
+  background: @main-bg;
+
+  .banner-text {
+    .flex-layout(@wrap: wrap; );
+    width: 320px;
+    padding: 0 15px;
+
+    .line {
+      width: 100%;
+    }
+
+    .main {
+      font-weight: 600;
+      font-size: 48px;
+    }
+
+    .sub {
+      font-size: 30px;
+      margin-bottom: 24px;
+    }
+
+    .download_button {
+      width: 100%;
+      margin-bottom: 24px;
+      padding: 0 30px;
+      display: inline-block;
+      max-width: 300px;
+      line-height: 72px;
+      background: #0F62FE;
+      text-align: center;
+      font-size: 24px;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    .cap {
+      font-size: 12px;
+      color: #333;
+      opacity: .5;
+    }
+  }
+
+  .image {
+    .flex-layout();
+  }
+}
+
+.anchors {
+  .flex-layout(@wrap: wrap; );
+
+  .card {
+    border: none;
+    width: 20%;
+    max-width: 240px;
+    min-width: 160px;
+    text-align: center;
+    padding-top: 30px;
+
+    >img {
+      width: 72px;
+      margin: 0 auto;
+    }
+  }
+}

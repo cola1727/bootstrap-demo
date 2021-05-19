@@ -1,0 +1,4 @@
+<li class="card">
+  <img class="card-img-top" src="{{ src }}" />
+  <div class="card-body">{{ title }}</div>
+</li>
